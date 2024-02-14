@@ -1,0 +1,9 @@
+@use 'theme' as *;
+
+@mixin responsive($point) {
+  $size: t(breakpoint, $point);
+
+  @media (max-width: $size) {
+    @content;
+  }
+}

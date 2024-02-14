@@ -1,0 +1,38 @@
+@use 'theme' as *;
+
+@mixin m-base($property, $value1, $value2: null) {
+  @if $value2 {
+    #{$property}-left: t(space, $value1);
+    #{$property}-right: t(space, $value2);
+  } @else {
+    #{$property}: t(space, $value1);
+  }
+}
+
+@mixin m($value) {
+  @include m-base(margin, $value);
+}
+
+@mixin mt($value) {
+  @include m-base(margin-top, $value);
+}
+
+@mixin mb($value) {
+  @include m-base(margin-bottom, $value);
+}
+
+@mixin ml($value) {
+  @include m-base(margin-left, $value);
+}
+
+@mixin mr($value) {
+  @include m-base(margin-right, $value);
+}
+
+@mixin mx($value1, $value2: null) {
+  @include m-base(margin, $value1, $value2);
+}
+
+@mixin my($value1, $value2: null) {
+  @include m-base(margin, $value1, $value2);
+}

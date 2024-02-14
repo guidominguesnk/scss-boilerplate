@@ -1,0 +1,19 @@
+@use 'sass:color';
+@use 'theme' as *;
+
+@mixin transparency($property, $color, $opacity) {
+  $color: theme('colors', $color);
+  $opacity: theme('opacity', $opacity);
+
+  @if $property == background {
+    background-color: color.adjust($color, $alpha: - $opacity);
+  }
+
+  @if $property == border {
+    border-color: color.adjust($color, $alpha: - $opacity);
+  }
+
+  @if $property != bg and $property != border {
+    @warn "Invalid token for. Choose from: 'bg' or 'border'.";
+  }
+}

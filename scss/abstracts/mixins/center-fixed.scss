@@ -1,0 +1,10 @@
+@use 'theme' as *;
+
+@mixin center-fixed {
+  $value: 50%;
+
+  position: fixed;
+  left: $value;
+  top: $value;
+  transform: translate(-$value, -$value);
+}

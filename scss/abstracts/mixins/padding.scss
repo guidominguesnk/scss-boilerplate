@@ -1,0 +1,40 @@
+@use 'theme' as *;
+
+@mixin p-base($property, $value1, $value2: null) {
+  $token: t(space, $value1);
+
+  @if $value2 {
+    #{$property}-left: t(space, $value1);
+    #{$property}-right: t(space, $value2);
+  }
+
+  #{$property}: $token;
+}
+
+@mixin p($value) {
+  @include p-base(padding, $value);
+}
+
+@mixin pt($value) {
+  @include p-base(padding-top, $value);
+}
+
+@mixin pb($value) {
+  @include p-base(padding-bottom, $value);
+}
+
+@mixin pl($value) {
+  @include p-base(padding-left, $value);
+}
+
+@mixin pr($value) {
+  @include p-base(padding-right, $value);
+}
+
+@mixin px($value1, $value2: null) {
+  @include p-base(padding, $value1, $value2);
+}
+
+@mixin py($value1, $value2: null) {
+  @include p-base(padding, $value1, $value2);
+}

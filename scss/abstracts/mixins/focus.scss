@@ -1,0 +1,19 @@
+@use 'theme' as *;
+
+@mixin focus($type) {
+  $border: t(border-width, thick);
+  $light-color: t(colors, zinc50);
+  $dark-color: t(colors, zinc950);
+
+  &:focus {
+    outline: $border solid transparent;
+    outline-offset: $border;
+
+    @if $type == light {
+      box-shadow: 0 0 0 $border $light-color;
+    }
+    @if $type == dark {
+      box-shadow: 0 0 0 $border $dark-color;
+    }
+  }
+}

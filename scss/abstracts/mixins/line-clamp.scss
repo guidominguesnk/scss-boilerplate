@@ -1,0 +1,10 @@
+@mixin line-clamp($lines) {
+  @if $lines < 1 or $lines > 6 {
+    @error "The value #{$lines} for line-clamp must be between 1 and 6.";
+  }
+
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+}

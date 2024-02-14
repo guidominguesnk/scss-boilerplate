@@ -1,0 +1,27 @@
+@use 'theme' as *;
+
+@mixin absolute(
+  $top: null,
+  $right: null,
+  $bottom: null,
+  $left: null,
+  $unit: space
+) {
+  position: absolute;
+
+  @if $top {
+    top: t($unit, $top);
+  }
+
+  @if $right {
+    right: t($unit, $right);
+  }
+
+  @if $bottom {
+    bottom: t($unit, $bottom);
+  }
+
+  @if $left {
+    left: t($unit, $left);
+  }
+}

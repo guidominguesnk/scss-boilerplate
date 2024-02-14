@@ -1,0 +1,35 @@
+@use 'sass:color';
+@use 'theme' as *;
+
+@mixin border-property($property, $width, $style, $color, $opacity: null) {
+  #{$property}-width: t(border-width, $width);
+  #{$property}-style: $style;
+
+  $border-color: t(colors, $color);
+
+  @if $opacity {
+    $border-color: color.adjust($border-color, $alpha: - t(opacity, $opacity));
+  }
+
+  #{$property}-color: $border-color;
+}
+
+@mixin border($width, $style, $color, $opacity: null) {
+  @include border-property(border, $width, $style, $color, $opacity);
+}
+
+@mixin border-t($width, $style, $color, $opacity: null) {
+  @include border-property(border-top, $width, $style, $color, $opacity);
+}
+
+@mixin border-b($width, $style, $color, $opacity: null) {
+  @include border-property(border-bottom, $width, $style, $color, $opacity);
+}
+
+@mixin border-l($width, $style, $color, $opacity: null) {
+  @include border-property(border-left, $width, $style, $color, $opacity);
+}
+
+@mixin border-r($width, $style, $color, $opacity: null) {
+  @include border-property(border-right, $width, $style, $color, $opacity);
+}

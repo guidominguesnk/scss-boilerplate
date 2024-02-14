@@ -1,0 +1,38 @@
+@use 'theme' as *;
+
+@mixin base-flex(
+  $d: flex,
+  $dir: row,
+  $align: null,
+  $justify: null,
+  $gap: null
+) {
+  display: $d;
+  flex-direction: $dir;
+  align-items: $align;
+  justify-content: $justify;
+
+  @if $gap {
+    gap: t(space, $gap);
+  }
+}
+
+@mixin flex($args...) {
+  @include base-flex($args...);
+}
+
+@mixin flex-col($args...) {
+  @include base-flex(flex, column, $args...);
+}
+
+@mixin flex-col-center($args...) {
+  @include base-flex(flex, column, center, center, $args...);
+}
+
+@mixin flex-center($args...) {
+  @include base-flex(flex, center, center, $args...);
+}
+
+@mixin flex-center-between($args...) {
+  @include base-flex(flex, row, center, space-between, $args...);
+}

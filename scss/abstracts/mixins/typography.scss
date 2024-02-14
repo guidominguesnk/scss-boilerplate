@@ -1,0 +1,15 @@
+@use 'theme' as *;
+
+@mixin typography($size, $weight: null, $height: null) {
+  @if $size {
+    font-size: t(font-size, $size);
+  }
+
+  @if $weight {
+    font-weight: t(font-weight, $weight);
+  }
+
+  @if $height {
+    line-height: t(line-height, $height);
+  }
+}

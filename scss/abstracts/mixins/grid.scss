@@ -1,0 +1,11 @@
+@use 'theme' as *;
+
+@mixin grid($col, $row-gap: null, $col-gap: null) {
+  display: grid;
+  grid-template-columns: repeat($col, 1fr);
+
+  $gap: t(space, $row-gap);
+  $gap: if($col-gap, t(space, $col-gap), $gap);
+
+  gap: $gap;
+}

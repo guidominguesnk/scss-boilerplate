@@ -1,0 +1,6 @@
+@use 'theme' as *;
+
+@mixin square($size) {
+  width: t(width, $size);
+  height: t(height, $size);
+}

@@ -1,0 +1,5 @@
+@mixin disable-reduced-motion {
+  @media (prefers-reduced-motion: reduce) {
+    transition-property: none;
+  }
+}

@@ -1,0 +1,69 @@
+@use 'theme' as *;
+
+$default-duration: t(transition, 150);
+$timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+@mixin base-transition($properties, $custom-duration: null) {
+  $duration-to-use: if(
+    $custom-duration,
+    t(transition, $custom-duration),
+    $default-duration
+  );
+
+  transition-property: $properties;
+  transition-timing-function: $timing-function;
+  transition-duration: $duration-to-use;
+}
+
+@mixin transition-all($custom-duration: null) {
+  @include base-transition((all), $custom-duration);
+}
+
+@mixin transition($custom-duration: null) {
+  @include base-transition(
+    (
+      color,
+      background-color,
+      border-color,
+      text-decoration-color,
+      fill,
+      stroke,
+      opacity,
+      box-shadow,
+      transform,
+      filter,
+      backdrop-filter
+    ),
+    $custom-duration
+  );
+}
+
+@mixin transition-colors($custom-duration: null) {
+  @include base-transition(
+    (
+      color,
+      background-color,
+      border-color,
+      text-decoration-color,
+      fill,
+      stroke
+    ),
+    $custom-duration
+  );
+}
+
+@mixin transition-opacity($custom-duration: null) {
+  @include base-transition((opacity), $custom-duration);
+}
+
+@mixin transition-shadow($custom-duration: null) {
+  @include base-transition((box-shadow), $custom-duration);
+}
+
+@mixin transition-transform($custom-duration: null) {
+  @include base-transition((transform), $custom-duration);
+}
+
+@mixin transition-custom($property, $custom-duration: null) {
+  @include base-transition(($property), $custom-duration);
+}

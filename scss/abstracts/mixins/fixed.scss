@@ -1,0 +1,27 @@
+@use 'theme' as *;
+
+@mixin fixed(
+  $top: null,
+  $right: null,
+  $left: null,
+  $bottom: null,
+  $unit: space
+) {
+  position: fixed;
+
+  @if $top {
+    top: t($unit, $top);
+  }
+
+  @if $right {
+    right: t($unit, $right);
+  }
+
+  @if $bottom {
+    bottom: t($unit, $bottom);
+  }
+
+  @if $left {
+    left: t($unit, $left);
+  }
+}
