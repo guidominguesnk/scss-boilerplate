@@ -36,7 +36,7 @@ The `theme.scss` file serves as a central repository for design tokens, providin
 
 ## Ready-to-use mixins:
 **Absolute Positioning** `absolute.scss`  
-This mixin provides a convenient way to apply absolute positioning to an element with customizable top, right, bottom, and left values. It enhances flexibility in layout design by allowing you to specify the positioning offsets.
+The mixin offers precise control over the positioning of an element through customizable top, right, bottom, and left values, enhancing layout flexibility.
 ```scss
 .element {
   @include absolute($top: 5, $right: 10);
@@ -44,7 +44,7 @@ This mixin provides a convenient way to apply absolute positioning to an element
 ```
 
 **Border Styling** `border.scss`  
-This mixin set simplifies the application of border styles to elements, offering a flexible approach to define width, style, color, and opacity. It provides options for a global border or individual borders for top, bottom, left, and right sides.
+This mixin provides a concise way to define border properties, allowing for flexible customization of width, style, color, and opacity on a global or individual side basis.
 ```scss
 .element {
   @include border(thick, solid, pure-white);
@@ -56,7 +56,7 @@ This mixin set simplifies the application of border styles to elements, offering
 ```
 
 **Center Fixed Position** `center-fixed.scss`  
-This mixin simplifies the centering of an element in a fixed position within its containing space. It utilizes the position: fixed property along with absolute positioning, ensuring the element remains centered regardless of viewport changes.
+Streamlining the process of centering an element within a fixed position, this mixin utilizes the position: fixed property and absolute positioning for consistent centering across viewports.
 ```scss
 .element {
   @include center-fixed;
@@ -64,7 +64,7 @@ This mixin simplifies the centering of an element in a fixed position within its
 ```
 
 **Color Transparency** `color-transparency.scss`  
-This mixin facilitates the application of transparency to background or border colors. It adjusts the specified color's alpha channel to achieve the desired opacity level, providing a straightforward way to create semi-transparent elements.
+Achieve semi-transparency in background or border colors effortlessly with this mixin, adjusting the alpha channel to the desired opacity level.
 ```scss
 .element {
   @include transparency(bg, pure-white, 70);
@@ -76,7 +76,7 @@ This mixin facilitates the application of transparency to background or border c
 ```
 
 **Fixed Positioning** `fixed.scss`  
-This mixin simplifies the application of fixed positioning to an element, allowing customization of top, right, bottom, and left values. It is designed to efficiently position an element within the viewport, providing control over its placement.
+Customize the positioning of an element within the viewport easily using this mixin, offering control over top, right, bottom, and left values for efficient placement.
 ```scss
 .element {
   @include fixed($top: 10, $right: 12);
@@ -84,7 +84,7 @@ This mixin simplifies the application of fixed positioning to an element, allowi
 ```
 
 **Flexible Box Layout** `flex.scss`  
-This mixin collection provides a versatile and customizable approach to handling flexbox layouts. It allows you to easily define the display property, flex direction, alignment, justification, and gap for flexible container elements.
+A comprehensive collection for handling flexbox layouts, allowing users to define display property, flex direction, alignment, justification, and gap for flexible container elements.
 ```scss
 .container {
   @include flex(row, center, space-between, 4);
@@ -107,7 +107,7 @@ This mixin collection provides a versatile and customizable approach to handling
 }
 ```
 **Focus Styling** `focus.scss`  
-This mixin provides a consistent and customizable styling for focused elements. It enhances the user experience by defining a clear and visible focus state. You can choose between light and dark focus styles, with an optional border and box-shadow configuration.
+Enhance the user experience by providing consistent and customizable styling for focused elements. Choose between light and dark focus styles with optional border and box-shadow configurations.
 ```scss
 .input-field {
   @include focus(light);
@@ -119,7 +119,7 @@ This mixin provides a consistent and customizable styling for focused elements. 
 ```
 
 **Font Face** `font-face.scss`  
-This mixin streamlines the declaration of custom font faces, allowing for easy inclusion and configuration. It supports multiple font formats and provides options for font weight, style, and display behavior.
+Streamline the inclusion and configuration of custom font faces with this mixin, supporting multiple font formats and offering options for font weight, style, and display behavior.
 ```scss
 @include font-face(
   "CustomFont",
@@ -138,7 +138,7 @@ This mixin streamlines the declaration of custom font faces, allowing for easy i
 );
 ```
 **Grid Layout** `grid.scss`  
-This mixin simplifies the creation of grid layouts by providing a concise way to define the number of columns and optional row and column gaps. It enhances the flexibility of grid-based designs by offering easy customization.
+Simplify grid layout creation by defining the number of columns and optional row and column gaps with this concise mixin, enhancing flexibility in grid-based designs.
 ```scss
 .container {
   @include grid(3, $row-gap: 5, $col-gap: 3);
@@ -149,7 +149,7 @@ This mixin simplifies the creation of grid layouts by providing a concise way to
 }
 ```
 **Line Clamp** `line-clamp.scss`  
-This mixin simplifies the implementation of the CSS line clamp technique, limiting the display of text to a specified number of lines. It enhances the readability of overflowing text by preventing it from exceeding a certain length.
+Implement the CSS line clamp technique effortlessly with this mixin, limiting the display of text to a specified number of lines and improving readability.
 ```scss
 .description {
   @include line-clamp(3);
@@ -161,7 +161,7 @@ This mixin simplifies the implementation of the CSS line clamp technique, limiti
 ```
 
 **Margin Utility** `margin.scss`  
-This mixin collection provides a versatile set of utility mixins for handling margin properties. It allows you to easily set margin values for all sides, individual sides, or both horizontal and vertical margins.
+A versatile set of utility mixins for handling margin properties, facilitating easy adjustment of margin values for all sides, individual sides, or both horizontal and vertical margins.
 ```scss
 .element {
   @include m(4);
@@ -193,7 +193,7 @@ This mixin collection provides a versatile set of utility mixins for handling ma
 ```
 
 **Padding Utility** `padding.scss`  
-This mixin collection provides a versatile set of utility mixins for handling padding properties. It allows you to easily set padding values for all sides, individual sides, or both horizontal and vertical paddings.
+This collection streamlines the application of padding properties with utility mixins, allowing for easy adjustment of padding values for all sides, individual sides, or both horizontal and vertical paddings.
 ```scss
 .element {
   @include p(4);
@@ -225,7 +225,7 @@ This mixin collection provides a versatile set of utility mixins for handling pa
 ```
 
 **Disable Reduced Motion** `reduced-motion.scss`  
-This mixin provides a way to disable certain CSS transitions when the user prefers reduced motion. It targets the prefers-reduced-motion media query, allowing you to enhance accessibility by respecting users' preferences for reduced motion.
+This mixin provides a straightforward way to disable CSS transitions based on the user's preference for reduced motion, targeting the prefers-reduced-motion media query for enhanced accessibility.
 ```scss
 .element {
   transition: opacity 0.3s ease;
@@ -235,23 +235,23 @@ This mixin provides a way to disable certain CSS transitions when the user prefe
 ```
 
 **Responsive Design** `responsive.scss`  
-This mixin simplifies the creation of responsive styles by utilizing a specified breakpoint. It applies the provided styles only when the viewport width is less than or equal to the specified breakpoint, allowing for a mobile-first approach to responsive design.
+Simplify the creation of responsive styles by utilizing specified breakpoints. This mixin applies styles only when the viewport width is less than or equal to the specified breakpoint, following a mobile-first approach.
 ```scss
 .element {
-  font-size: 20px;
+  width: max-content;
 
   @include responsive(md) {
-    font-size: 18px;
+    width: auto;
   }
 
   @include responsive(sm) {
-    font-size: 16px;
+    display: none;
   }
 }
 ```
 
 **Square Element** `square.scss`  
-This mixin simplifies the creation of square elements by setting both the width and height to the same size. It enhances consistency in design, especially when working with responsive layouts or square-based components.
+Streamline the creation of square elements by setting both the width and height to the same size, ensuring design consistency, especially in responsive layouts or square-based components.
 ```scss
 .square-box {
   @include square(4);
@@ -263,7 +263,7 @@ This mixin simplifies the creation of square elements by setting both the width 
 ```
 
 **Transition Utilities** `transition.scss`  
-This mixin collection provides a set of utility mixins to streamline the application of CSS transitions. It covers common transition scenarios, such as transitioning all properties, specific property groups (colors, opacity, shadows, transforms), and custom properties.
+A collection of utility mixins for streamlining the application of CSS transitions, covering common scenarios such as transitioning all properties, specific property groups (colors, opacity, shadows, transforms), and custom properties.
 ```scss
 .element {
   @include transition-all;
@@ -286,7 +286,7 @@ This mixin collection provides a set of utility mixins to streamline the applica
 ```
 
 **Typography** `typography.scss`  
-This mixin simplifies the styling of typography by allowing you to set font size, font weight, and line height in a single declaration. It enhances consistency in text styling across different elements.
+Simplifying typography styling, the mixin enables setting font size, font weight, and line height in a single declaration, promoting consistency across various text elements.
 ```scss
 .heading {
   @include typography(4xl, bold, tight);
